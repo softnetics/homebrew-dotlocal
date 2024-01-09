@@ -7,5 +7,5 @@ class DotLocal < Formula
     license "MIT"
     version "0.1"
 
-    app "DotLocal.app"
+    pkg "DotLocal.dmg"
   end
