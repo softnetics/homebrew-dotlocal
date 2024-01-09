@@ -1,4 +1,4 @@
-class DotLocal < Formula
+cask "dotlocal" do
     desc ".local domains for anything, powered by Orbstack"
     homepage "https://github.com/softnetics/dotlocal"
     url "https://github.com/softnetics/dotlocal/releases/download/v0.1/DotLocal.0.1.dmg"
@@ -7,5 +7,5 @@ class DotLocal < Formula
     license "MIT"
     version "0.1"
 
-    pkg "DotLocal.dmg"
+    app "DotLocal.app"
   end
