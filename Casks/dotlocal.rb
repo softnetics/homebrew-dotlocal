@@ -1,10 +1,11 @@
 cask "dotlocal" do
-    desc ".local domains for anything, powered by Orbstack"
-    homepage "https://github.com/softnetics/dotlocal"
-    version "0.0.0"
-    url "https://github.com/softnetics/dotlocal/releases/download/v#{version}/DotLocal-v#{version}.dmg"
-    name "DotLocal"
-    sha256 "55b5acff6eccc1503d35f446e3757248165e6541e736551d7e551d1ed7ecbb13"
+  version "0.0.1"
+  sha256 "cae249804541f61ed453e6d4932a9c5f43064180fb0df48af50a8c49357c55c9"
 
-    app "DotLocal.app"
-  end
+  url "https://github.com/softnetics/dotlocal/releases/download/v#{version}/DotLocal-v#{version}.dmg"
+  name "DotLocal"
+  desc ".local domains for anything, powered by Orbstack"
+  homepage "https://github.com/softnetics/dotlocal"
+
+  app "DotLocal.app"
+end
