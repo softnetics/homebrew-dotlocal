@@ -22,6 +22,8 @@ jobs:
           [remote "origin"]
             url = https://$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
           EOF
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Bump tap
         env:
