@@ -1,0 +1,34 @@
+name: Bump cask
+on:
+  workflow_dispatch:
+    inputs:
+      cask:
+        required: true
+        type: string
+      version:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+      - name: Setup gitconfig with token
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          cat << EOF > ~/.gitconfig
+          [remote "origin"]
+            url = https://$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
+          EOF
+
+      - name: Bump tap
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GH_PAT }}
+          REPOSITORY: ${{ github.repository }}
+          CASK: ${{ github.event.inputs.cask }}
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+          brew tap "$REPOSITORY"
+          brew bump-cask-pr "$REPOSITORY/$CASK" --version "$VERSION" --no-fork
