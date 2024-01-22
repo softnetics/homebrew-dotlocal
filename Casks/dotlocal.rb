@@ -1,6 +1,6 @@
 cask "dotlocal" do
-  version "0.1.0"
-  sha256 "3bf2b592e2a1f96fcb685cc542f3d59714814413a2f654d31e88c0f0feca5548"
+  version "0.2.0"
+  sha256 "9653ed7d4e605cf0138a7ae1da54112905a4acd11e337a57f86fb3e661e899a4"
 
   url "https://github.com/softnetics/dotlocal/releases/download/v#{version}/DotLocal-v#{version}.dmg"
   name "DotLocal"
